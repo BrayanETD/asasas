@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #4f5398, #6e6f81);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    animation: pulse 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #4e54c8;
+}
+
+.navidad-button {
+    background-color: #2fbe37;
+    color: #fff;
+    animation: slideInLeft 3s ease-out;
+}
+
+.ano-button {
+    background-color: #4285f4;
+    color: #fff;
+    animation: slideInRight 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(78, 84, 200, 0.8);
+    }
+}
